@@ -1,4 +1,19 @@
-// validate prompt answer
+//comment
+/* GAME FUNCTIONS */
+
+// function to generate a random numeric value
+var randomNumber = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min) + min);
+
+  return value;
+};
+
+// function to check if player wants to fight or skip
+var fightOrSkip = function() {
+  // ask player if they'd like to fight or run
+  var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+
+  // validate prompt answer
   if (promptFight === "" || promptFight === null) {
     window.alert("You need to provide a valid answer! Please try again.");
     // use return to call it again and stop the rest of this function from running
